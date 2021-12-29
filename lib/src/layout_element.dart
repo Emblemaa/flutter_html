@@ -37,7 +37,8 @@ class TableLayoutElement extends LayoutElement {
 
   @override
   Widget toWidget(RenderContext context) {
-    bool hasTable = element?.parent?.parent?.localName == 'td';
+    bool hasTable = element?.parent?.parent?.localName == 'td' ||
+        element?.parent?.localName == 'td'; 
     return Container(
       key: AnchorKey.of(context.parser.key, this),
       padding: style.padding?.nonNegative,
